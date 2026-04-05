@@ -4,7 +4,7 @@ export const Footer = () => {
     return (
         <footer className="flex justify-between items-center flex-wrap px-[2.5%] lg:px-[9%] py-8.5 bg-[var(--second-bg-color)]">
             <div className="footer-text">
-                <p className="text-2xl">Copyright &copy; 2025 by Luis Angel | All Rights Reserved.</p>
+                <p className="text-2xl">Copyright &copy; 2025 Luis Angel. Todos los derechos reservados.</p>
             </div>
 
             <div className="footer-iconTop">

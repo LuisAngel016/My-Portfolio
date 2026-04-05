@@ -5,13 +5,13 @@ export const Home = () => {
     return (
         <section className="flex flex-col md:flex-row justify-center items-center" id="home">
             <div className="order-1 md:order-1">
-                <h3 className="text-[2.6rem] lg:text-[3.2rem] font-bold">Hello, It's me</h3>
+                <h3 className="text-[2.6rem] lg:text-[3.2rem] font-bold">Hola, soy</h3>
                 <h1 className="text-[5rem] md:text-[5.6rem] font-bold leading-[1.3]">Luis Bustamante</h1>
                 <h3 className="text-[2.6rem] lg:text-[3.2rem] font-bold mb-8">
-                    And I'm a{' '}
+                    Soy{' '}
                     <span className="text-[var(--main-color)]">
                         <ReactTyped
-                            strings={['FullStack Developer']}
+                            strings={['Desarrollador Full Stack']}
                             typeSpeed={100}
                             backSpeed={100}
                             backDelay={1000}
@@ -49,7 +49,7 @@ export const Home = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    Download CV
+                    Descargar CV
                 </a>
             </div>
 

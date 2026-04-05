@@ -47,7 +47,7 @@ export const Portfolio = () => {
     return (
         <section className="bg-[var(--second-bg-color)]" id="portfolio">
             <h2 className="heading">
-                Latest <span>Project</span>
+                Proyectos <span>destacados</span>
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center gap-10">

@@ -4,16 +4,16 @@ export const About = () => {
             <div className="order-1 md:order-1">
                 <img
                     src="/images/me.png"
-                    alt="About Luis Bustamante"
+                    alt="Luis Bustamante"
                     className="w-[70vw] md:w-[22vw] lg:w-[70vw] rounded-2xl mt-16 md:mt-0"
                 />
             </div>
 
             <div className="order-2 md:order-2">
                 <h2 className="text-7xl font-bold leading-[1.2] md:text-left">
-                    About <span>Me</span>
+                    Sobre <span>mi</span>
                 </h2>
-                <h3 className="text-[2.6rem] font-semibold">FullStack Developer!</h3>
+                <h3 className="text-[2.6rem] font-semibold">Desarrollador Full Stack</h3>
                 <p className="text-2xl my-8 mb-12">
                     {/* Mi nombre es Luis Angel Bustamante Herazo, Ingeniero de Sistemas y Desarrollador Web.
                     Me especializo en la creación de experiencias digitales a través del desarrollo web.

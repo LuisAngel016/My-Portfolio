@@ -56,35 +56,35 @@ export const Header = () => {
                     className={`block md:inline text-2xl text-center md:text-left ml-0 md:ml-16 my-12 md:my-0 transition-colors duration-300 ease-in-out hover:text-[var(--main-color)] ${activeSection === 'home' ? '!text-[var(--main-color)]' : 'text-[var(--text-color)]'}`}
                     onClick={() => handleNavClick('home')}
                 >
-                    Home
+                    Inicio
                 </a>
                 <a
                     href="#about"
                     className={`block md:inline text-2xl text-center md:text-left ml-0 md:ml-16 my-12 md:my-0 transition-colors duration-300 ease-in-out hover:text-[var(--main-color)] ${activeSection === 'about' ? '!text-[var(--main-color)]' : 'text-[var(--text-color)]'}`}
                     onClick={() => handleNavClick('about')}
                 >
-                    About
+                    Sobre mi
                 </a>
                 <a
                     href="#skills"
                     className={`block md:inline text-2xl text-center md:text-left ml-0 md:ml-16 my-12 md:my-0 transition-colors duration-300 ease-in-out hover:text-[var(--main-color)] ${activeSection === 'skills' ? '!text-[var(--main-color)]' : 'text-[var(--text-color)]'}`}
                     onClick={() => handleNavClick('skills')}
                 >
-                    Skills
+                    Habilidades
                 </a>
                 <a
                     href="#portfolio"
                     className={`block md:inline text-2xl text-center md:text-left ml-0 md:ml-16 my-12 md:my-0 transition-colors duration-300 ease-in-out hover:text-[var(--main-color)] ${activeSection === 'portfolio' ? '!text-[var(--main-color)]' : 'text-[var(--text-color)]'}`}
                     onClick={() => handleNavClick('portfolio')}
                 >
-                    Portfolio
+                    Proyectos
                 </a>
                 <a
                     href="#contact"
                     className={`block md:inline text-2xl text-center md:text-left ml-0 md:ml-16 my-12 md:my-0 transition-colors duration-300 ease-in-out hover:text-[var(--main-color)] ${activeSection === 'contact' ? '!text-[var(--main-color)]' : 'text-[var(--text-color)]'}`}
                     onClick={() => handleNavClick('contact')}
                 >
-                    Contact
+                    Contacto
                 </a>
             </nav>
         </header>

@@ -4,17 +4,17 @@ export const Skills = () => {
     const skills = [
         {
             icon: <Code size={70} />,
-            title: 'Web Development',
+            title: 'Desarrollo web',
             description: 'Especializado en desarrollo fullStack con React, TypeScript, TanStack Query, Nest y tecnologías modernas. Creación de interfaces de usuario responsivas y experiencias web optimizadas. Desarrollo de soluciones escalables y seguras para la web.'
         },
         {
             icon: <Palette size={70} />,
-            title: 'Graphic Design',
+            title: 'Diseno grafico',
             description: 'Diseño de interfaces atractivas y funcionales con enfoque en UX/UI, creación de identidades visuales consistentes y recursos gráficos personalizados que mejoran la comunicación visual y la experiencia del usuario.',
         },
         {
             icon: <Smartphone size={70} />,
-            title: 'Mobile Development',
+            title: 'Desarrollo movil',
             description: 'Especializado en desarrollo de aplicaciones móviles utilizando Flutter y React Native. Creación de apps multiplataforma con interfaces modernas, alto rendimiento y experiencia de usuario optimizada. Implementación de soluciones móviles innovadoras y seguras.'
         },
     ];
@@ -22,7 +22,7 @@ export const Skills = () => {
     return (
         <section className="skills" id="skills">
             <h2 className="heading">
-                My <span>Skills</span>
+                Mis <span>habilidades</span>
             </h2>
 
             <div className="flex justify-center items-center flex-wrap gap-8">

@@ -2,7 +2,7 @@ export const Contact = () => {
     return (
         <section className="contact" id="contact">
             <h2 className="heading mb-12">
-                Contact <span>Me!</span>
+                Contacta <span>conmigo</span>
             </h2>
 
             <form
@@ -14,28 +14,28 @@ export const Contact = () => {
                     <input
                         type="text"
                         name="name"
-                        placeholder="Full Name"
+                        placeholder="Nombre completo"
                         required
                         className="w-full p-7 text-2xl text-[var(--text-color)] bg-[var(--second-bg-color)] rounded-md"
                     />
                     <input
                         type="email"
                         name="email"
-                        placeholder="Email Address"
+                        placeholder="Correo electronico"
                         required
                         className="w-full p-7 text-2xl text-[var(--text-color)] bg-[var(--second-bg-color)] rounded-md"
                     />
                     <input
                         type="number"
                         name="number"
-                        placeholder="Mobile Number"
+                        placeholder="Telefono"
                         required
                         className="w-full p-7 text-2xl text-[var(--text-color)] bg-[var(--second-bg-color)] rounded-md"
                     />
                     <input
                         type="text"
-                        name="Subject"
-                        placeholder="Email Subject"
+                        name="subject"
+                        placeholder="Asunto"
                         className="w-full p-7 text-2xl text-[var(--text-color)] bg-[var(--second-bg-color)] rounded-md"
                     />
                 </div>
@@ -44,18 +44,17 @@ export const Contact = () => {
                     name="comments"
                     cols={30}
                     rows={10}
-                    placeholder="Your Message"
+                    placeholder="Tu mensaje"
                     className="w-full p-6 text-2xl text-[var(--text-color)] bg-[var(--second-bg-color)] rounded-md my-3 resize-none"
                 />
 
                 <input
                     type="submit"
-                    value="Send Message"
+                    value="Enviar mensaje"
                     className="btn mt-8 cursor-pointer"
                 />
 
                 {/* Hidden inputs para FormSubmit */}
-                <input type="hidden" name="_next" value="http://localhost:5174" />
                 <input type="hidden" name="_captcha" value="false" />
             </form>
         </section>
