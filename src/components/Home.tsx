@@ -43,7 +43,7 @@ export const Home = () => {
                 </div>
 
                 <a
-                    href="https://drive.google.com/file/d/1u4S3xjdF1YGNSQ5pPA9MtlOHaYC3y9uG/view?usp=sharing"
+                    href="https://drive.google.com/file/d/1Jogra6jz__lh4w9tSg83w590c12waToj/view?usp=sharing"
                     download="Currículum.pdf"
                     className="btn mb-12 md:mb-0 font-medium"
                     target="_blank"
