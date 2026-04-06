@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { ExternalLink } from 'lucide-react';
+import { useLanguage } from '../lib/i18n';
 
 type Project = {
     id: number;
@@ -13,6 +14,10 @@ type Project = {
 const PortfolioCard = ({ project }: { project: Project }) => {
     const [imageIndex, setImageIndex] = useState(0);
     const hasMultipleImages = project.images.length > 1;
+
+    useEffect(() => {
+        setImageIndex(0);
+    }, [project.images]);
 
     useEffect(() => {
         if (!hasMultipleImages) return;
@@ -65,42 +70,13 @@ const PortfolioCard = ({ project }: { project: Project }) => {
 };
 
 export const Portfolio = () => {
-    const projects: Project[] = [
-        {
-            id: 1,
-            images: ['/images/teslo-shop.png'],
-            title: 'TesloShop',
-            url: 'https://teslo-shop-frontend-lb.netlify.app/#/',
-            credentials: 'user: test1@google.com | pass: Abc123',
-            description: 'Proyecto de tienda en linea desarrollado con React y NestJS.'
-        },
-        {
-            id: 2,
-            images: ['/images/heroes.png'],
-            title: 'Heroes App',
-            url: 'https://heroes-app-universe.netlify.app/#/',
-            description: 'Aplicacion de gestion de heroes desarrollada con React y NestJS.'
-        },
-        {
-            id: 3,
-            images: ['/images/enloslabiosrubi.png'],
-            title: 'En Los Labios Rubi',
-            url: 'https://enloslabiosrubi.com/',
-            description: 'E-commerce de belleza con una propuesta visual de marca enfocada en experiencia de compra y catalogo online.'
-        },
-        {
-            id: 4,
-            images: ['/images/appointler 2.png', '/images/appointler.png'],
-            title: 'Appointler',
-            url: 'https://appointler.netlify.app/',
-            description: 'SaaS para gestion de citas con landing publica y panel administrativo que rota entre ambas vistas automaticamente.'
-        }
-    ];
+    const { t } = useLanguage();
+    const projects: Project[] = t.portfolio.projects;
 
     return (
         <section className="bg-[var(--second-bg-color)]" id="portfolio">
             <h2 className="heading">
-                Proyectos <span>destacados</span>
+                {t.portfolio.title} <span>{t.portfolio.titleHighlight}</span>
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center gap-10">

@@ -1,28 +1,28 @@
 import { Code, Palette, Smartphone } from 'lucide-react';
+import { useLanguage } from '../lib/i18n';
 
 export const Skills = () => {
+    const { t } = useLanguage();
+
     const skills = [
         {
             icon: <Code size={70} />,
-            title: 'Desarrollo web',
-            description: 'Especializado en desarrollo fullStack con React, TypeScript, TanStack Query, Nest y tecnologías modernas. Creación de interfaces de usuario responsivas y experiencias web optimizadas. Desarrollo de soluciones escalables y seguras para la web.'
+            ...t.skills.items[0]
         },
         {
             icon: <Palette size={70} />,
-            title: 'Diseno grafico',
-            description: 'Diseño de interfaces atractivas y funcionales con enfoque en UX/UI, creación de identidades visuales consistentes y recursos gráficos personalizados que mejoran la comunicación visual y la experiencia del usuario.',
+            ...t.skills.items[1]
         },
         {
             icon: <Smartphone size={70} />,
-            title: 'Desarrollo movil',
-            description: 'Especializado en desarrollo de aplicaciones móviles utilizando Flutter y React Native. Creación de apps multiplataforma con interfaces modernas, alto rendimiento y experiencia de usuario optimizada. Implementación de soluciones móviles innovadoras y seguras.'
+            ...t.skills.items[2]
         },
     ];
 
     return (
         <section className="skills" id="skills">
             <h2 className="heading">
-                Mis <span>habilidades</span>
+                {t.skills.title} <span>{t.skills.titleHighlight}</span>
             </h2>
 
             <div className="flex justify-center items-center flex-wrap gap-8">
@@ -36,9 +36,6 @@ export const Skills = () => {
                         </div>
                         <h3 className="text-[2.6rem] font-semibold">{skill.title}</h3>
                         <p className="text-[1.2rem] my-4 mb-8">{skill.description}</p>
-                        {/* <a href="#" className="btn">
-                            Read More
-                        </a> */}
                     </div>
                 ))}
             </div>

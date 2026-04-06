@@ -1,8 +1,12 @@
+import { useLanguage } from '../lib/i18n';
+
 export const Contact = () => {
+    const { t } = useLanguage();
+
     return (
         <section className="contact" id="contact">
             <h2 className="heading mb-12">
-                Contacta <span>conmigo</span>
+                {t.contact.title} <span>{t.contact.titleHighlight}</span>
             </h2>
 
             <form
@@ -14,28 +18,28 @@ export const Contact = () => {
                     <input
                         type="text"
                         name="name"
-                        placeholder="Nombre completo"
+                        placeholder={t.contact.name}
                         required
                         className="w-full p-7 text-2xl text-[var(--text-color)] bg-[var(--second-bg-color)] rounded-md"
                     />
                     <input
                         type="email"
                         name="email"
-                        placeholder="Correo electronico"
+                        placeholder={t.contact.email}
                         required
                         className="w-full p-7 text-2xl text-[var(--text-color)] bg-[var(--second-bg-color)] rounded-md"
                     />
                     <input
                         type="number"
                         name="number"
-                        placeholder="Telefono"
+                        placeholder={t.contact.phone}
                         required
                         className="w-full p-7 text-2xl text-[var(--text-color)] bg-[var(--second-bg-color)] rounded-md"
                     />
                     <input
                         type="text"
                         name="subject"
-                        placeholder="Asunto"
+                        placeholder={t.contact.subject}
                         className="w-full p-7 text-2xl text-[var(--text-color)] bg-[var(--second-bg-color)] rounded-md"
                     />
                 </div>
@@ -44,17 +48,16 @@ export const Contact = () => {
                     name="comments"
                     cols={30}
                     rows={10}
-                    placeholder="Tu mensaje"
+                    placeholder={t.contact.message}
                     className="w-full p-6 text-2xl text-[var(--text-color)] bg-[var(--second-bg-color)] rounded-md my-3 resize-none"
                 />
 
                 <input
                     type="submit"
-                    value="Enviar mensaje"
+                    value={t.contact.submit}
                     className="btn mt-8 cursor-pointer"
                 />
 
-                {/* Hidden inputs para FormSubmit */}
                 <input type="hidden" name="_captcha" value="false" />
             </form>
         </section>
