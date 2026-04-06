@@ -1,5 +1,5 @@
 
-import { Header, Home, About, Skills, Portfolio, Contact, Footer } from './components';
+import { Header, Home, About, Experience, Skills, Portfolio, Contact, Footer } from './components';
 
 export const MyPortfolioApp = () => {
   return (
@@ -7,6 +7,7 @@ export const MyPortfolioApp = () => {
       <Header />
       <Home />
       <About />
+      <Experience />
       <Skills />
       <Portfolio />
       <Contact />

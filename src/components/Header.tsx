@@ -67,6 +67,13 @@ export const Header = () => {
                         {t.nav.about}
                     </a>
                     <a
+                        href="#experience"
+                        className={`block md:inline text-2xl text-center md:text-left ml-0 md:ml-16 my-12 md:my-0 transition-colors duration-300 ease-in-out hover:text-[var(--main-color)] ${activeSection === 'experience' ? '!text-[var(--main-color)]' : 'text-[var(--text-color)]'}`}
+                        onClick={() => handleNavClick('experience')}
+                    >
+                        {t.nav.experience}
+                    </a>
+                    <a
                         href="#skills"
                         className={`block md:inline text-2xl text-center md:text-left ml-0 md:ml-16 my-12 md:my-0 transition-colors duration-300 ease-in-out hover:text-[var(--main-color)] ${activeSection === 'skills' ? '!text-[var(--main-color)]' : 'text-[var(--text-color)]'}`}
                         onClick={() => handleNavClick('skills')}

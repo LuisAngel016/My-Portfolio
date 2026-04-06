@@ -15,6 +15,7 @@ type TranslationSchema = {
     nav: {
         home: string;
         about: string;
+        experience: string;
         skills: string;
         portfolio: string;
         contact: string;
@@ -55,6 +56,18 @@ type TranslationSchema = {
             description: string;
         }>;
     };
+    experience: {
+        title: string;
+        titleHighlight: string;
+        intro: string;
+        items: Array<{
+            period: string;
+            role: string;
+            company: string;
+            summary: string;
+            achievements: string[];
+        }>;
+    };
     portfolio: {
         title: string;
         titleHighlight: string;
@@ -80,6 +93,7 @@ const translations: Record<Language, TranslationSchema> = {
         nav: {
             home: 'Inicio',
             about: 'Sobre mi',
+            experience: 'Experiencia',
             skills: 'Habilidades',
             portfolio: 'Proyectos',
             contact: 'Contacto'
@@ -101,7 +115,7 @@ const translations: Record<Language, TranslationSchema> = {
             profileTitle: 'Desarrollador Full Stack',
             profileDescription: 'Construyo productos digitales enfocados en negocio, rendimiento y experiencia de usuario.',
             eyebrow: 'Acerca de mi',
-            title: 'Desarrollo soluciones que se ven bien y tambien',
+            title: 'Desarrollo experiencias intuitivas que tambien',
             titleHighlight: 'resuelven problemas reales',
             description: 'Soy Luis Bustamante, desarrollador de software con experiencia en aplicaciones web, moviles y de escritorio. He trabajado en productos que optimizan procesos de negocio, automatizan flujos y mejoran la toma de decisiones con interfaces claras, arquitectura solida y foco en escalabilidad.',
             highlights: [
@@ -133,6 +147,35 @@ const translations: Record<Language, TranslationSchema> = {
                 {
                     title: 'Desarrollo movil',
                     description: 'Construyo aplicaciones moviles con Flutter y React Native, priorizando rendimiento, mantenibilidad y una experiencia solida para el usuario final.'
+                }
+            ]
+        },
+        experience: {
+            title: 'Mi',
+            titleHighlight: 'experiencia',
+            intro: 'He participado en proyectos donde el software no era solo una interfaz, sino una herramienta para mejorar operaciones, automatizar procesos y generar resultados medibles.',
+            items: [
+                {
+                    period: '2022 - Actualidad',
+                    role: 'Desarrollador Full Stack',
+                    company: 'Proyectos de producto y soluciones digitales',
+                    summary: 'Trabajo en aplicaciones orientadas a negocio con foco en arquitectura, experiencia de usuario y rendimiento.',
+                    achievements: [
+                        'Implementacion de flujos de inventario y facturacion para operaciones internas.',
+                        'Construccion de dashboards comparativos y reportes PDF para toma de decisiones.',
+                        'Desarrollo de interfaces web y moviles con enfoque en escalabilidad y mantenibilidad.'
+                    ]
+                },
+                {
+                    period: 'Stack principal',
+                    role: 'React, TypeScript, NestJS, Flutter',
+                    company: 'Frontend, backend y mobile',
+                    summary: 'Me desenvuelvo en productos end-to-end, conectando la capa visual con logica de negocio y datos.',
+                    achievements: [
+                        'Interfaces modernas y responsivas orientadas a conversion y productividad.',
+                        'Integracion de APIs, formularios, paneles de administracion y modulos de negocio.',
+                        'Optimizacion de experiencia de usuario, estructura de codigo y tiempos de entrega.'
+                    ]
                 }
             ]
         },
@@ -189,6 +232,7 @@ const translations: Record<Language, TranslationSchema> = {
         nav: {
             home: 'Home',
             about: 'About',
+            experience: 'Experience',
             skills: 'Skills',
             portfolio: 'Projects',
             contact: 'Contact'
@@ -210,7 +254,7 @@ const translations: Record<Language, TranslationSchema> = {
             profileTitle: 'Full Stack Developer',
             profileDescription: 'I build digital products focused on business impact, performance, and user experience.',
             eyebrow: 'About me',
-            title: 'I build solutions that look great and also',
+            title: 'I build intuitive experiences that also',
             titleHighlight: 'solve real problems',
             description: 'I am Luis Bustamante, a software developer with experience in web, mobile, and desktop applications. I have worked on products that optimize business processes, automate workflows, and improve decision-making through clear interfaces, solid architecture, and scalable solutions.',
             highlights: [
@@ -242,6 +286,35 @@ const translations: Record<Language, TranslationSchema> = {
                 {
                     title: 'Mobile development',
                     description: 'I build mobile apps with Flutter and React Native, prioritizing performance, maintainability, and a polished user experience.'
+                }
+            ]
+        },
+        experience: {
+            title: 'My',
+            titleHighlight: 'experience',
+            intro: 'I have contributed to projects where software is not just an interface, but a tool to improve operations, automate workflows, and generate measurable business outcomes.',
+            items: [
+                {
+                    period: '2022 - Present',
+                    role: 'Full Stack Developer',
+                    company: 'Product and digital solution projects',
+                    summary: 'I work on business-oriented applications with strong attention to architecture, user experience, and performance.',
+                    achievements: [
+                        'Implemented inventory and billing workflows for internal operations.',
+                        'Built comparative dashboards and PDF reports to support decision-making.',
+                        'Delivered web and mobile interfaces with scalability and maintainability in mind.'
+                    ]
+                },
+                {
+                    period: 'Core stack',
+                    role: 'React, TypeScript, NestJS, Flutter',
+                    company: 'Frontend, backend, and mobile',
+                    summary: 'I am comfortable building end-to-end products, connecting the visual layer with business logic and data.',
+                    achievements: [
+                        'Modern responsive interfaces focused on conversion and productivity.',
+                        'API integrations, forms, admin panels, and business modules.',
+                        'Continuous optimization of user experience, code structure, and delivery speed.'
+                    ]
                 }
             ]
         },
