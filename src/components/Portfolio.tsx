@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { ExternalLink } from 'lucide-react';
 import { useLanguage } from '../lib/i18n';
 
 type Project = {
@@ -32,15 +31,18 @@ const PortfolioCard = ({ project }: { project: Project }) => {
     }, [hasMultipleImages, project.images.length]);
 
     return (
-        <div className="relative rounded-[2rem] shadow-[0_0_1rem_var(--bg-color)] overflow-hidden flex group border border-white/8 bg-[rgba(31,36,45,0.55)]">
+        <div
+            className="group relative flex cursor-pointer overflow-hidden rounded-[2rem] border border-white/10 bg-[rgba(31,36,45,0.55)] shadow-[0_10px_30px_rgba(0,0,0,0.28)] transition-all duration-500 ease-out hover:-translate-y-1 hover:border-[rgba(14,255,255,0.35)] hover:shadow-[0_18px_48px_rgba(0,0,0,0.42)]"
+            onClick={() => window.open(project.url, '_blank', 'noopener,noreferrer')}
+        >
             <img
                 src={project.images[imageIndex]}
                 alt={project.title}
-                className="w-full h-[350px] object-cover object-center transition-transform duration-500 ease-in-out group-hover:scale-110"
+                className="h-[350px] w-full object-cover object-center transition-all duration-700 ease-out group-hover:scale-[1.06] group-hover:brightness-[0.95]"
             />
 
             <div className="absolute inset-x-0 top-0 z-10 flex items-start justify-between p-5">
-                <span className="rounded-full border border-white/12 bg-[rgba(0,0,0,0.28)] px-4 py-2 text-[1.1rem] font-semibold uppercase tracking-[0.16rem] text-white backdrop-blur-sm">
+                <span className="rounded-full border border-white/20 bg-[rgba(12,15,22,0.58)] px-4 py-2 text-[1.1rem] font-semibold uppercase tracking-[0.16rem] text-white/95 backdrop-blur-sm transition-colors duration-300 group-hover:border-white/35 group-hover:bg-[rgba(12,15,22,0.72)] group-hover:text-white">
                     {project.category}
                 </span>
 
@@ -56,14 +58,16 @@ const PortfolioCard = ({ project }: { project: Project }) => {
                 )}
             </div>
 
-            <div className="absolute inset-x-0 bottom-0 z-10 bg-[linear-gradient(180deg,rgba(10,12,17,0),rgba(10,12,17,0.92))] p-6 pt-16">
+            <div className="pointer-events-none absolute inset-0 z-[1] bg-[radial-gradient(circle_at_65%_22%,rgba(255,255,255,0.12),rgba(255,255,255,0)_46%),linear-gradient(120deg,rgba(8,10,15,0.18),rgba(8,10,15,0.42))] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+
+            <div className="absolute inset-x-0 bottom-0 z-10 bg-[linear-gradient(180deg,rgba(8,10,15,0),rgba(8,10,15,0.82)_42%,rgba(8,10,15,0.94))] p-6 pt-16">
                 <h4 className="text-[2.6rem] font-bold text-white">{project.title}</h4>
-                <p className="mt-2 text-[1.45rem] leading-relaxed text-white/80">{project.description}</p>
+                <p className="mt-2 text-[1.45rem] leading-relaxed text-white/82">{project.description}</p>
                 <div className="mt-4 flex flex-wrap gap-2">
                     {project.stack.map((tech) => (
                         <span
                             key={`${project.id}-${tech}`}
-                            className="rounded-full border border-white/10 bg-white/8 px-3 py-2 text-[1.05rem] font-semibold uppercase tracking-[0.12rem] text-white/85 backdrop-blur-sm"
+                            className="rounded-full border border-white/20 bg-[rgba(10,12,17,0.62)] px-3 py-2 text-[1.05rem] font-semibold uppercase tracking-[0.12rem] text-white/92 backdrop-blur-sm transition-colors duration-300 group-hover:border-white/35 group-hover:bg-[rgba(10,12,17,0.78)]"
                         >
                             {tech}
                         </span>
@@ -71,22 +75,12 @@ const PortfolioCard = ({ project }: { project: Project }) => {
                 </div>
             </div>
 
-            <div className="absolute bottom-0 left-0 w-full h-full bg-gradient-to-t from-[var(--main-color)] to-[rgba(0,0,0,0.1)] flex justify-center items-center flex-col text-center px-16 transform translate-y-full transition-transform duration-500 ease-in-out group-hover:translate-y-0">
-                <h4 className="text-[3rem] font-bold text-white">{project.title}</h4>
-                <p className="text-2xl my-1 mb-4 text-white">{project.description}</p>
+            <div className="absolute bottom-5 right-5 z-20 flex items-center gap-3">
                 {project.credentials && (
-                    <div>
-                        <h2 className="text-lg text-white mb-4">{project.credentials}</h2>
-                    </div>
+                    <span className="hidden rounded-full border border-white/20 bg-[rgba(10,12,17,0.66)] px-4 py-2 text-[1rem] font-medium text-white/88 backdrop-blur-sm lg:inline-block">
+                        {project.credentials}
+                    </span>
                 )}
-                <a
-                    href={project.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex justify-center items-center w-20 h-20 bg-[var(--text-color)] rounded-full text-[var(--bg-color)] hover:bg-[var(--bg-color)] hover:text-[var(--text-color)] transition-colors duration-300"
-                >
-                    <ExternalLink size={20} />
-                </a>
             </div>
         </div>
     );
