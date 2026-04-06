@@ -2,7 +2,7 @@
 
 ![Portfolio Banner](public/images/portfolio-banner.svg)
 
-[![Portfolio Online](https://img.shields.io/badge/Portfolio-Online-22c55e?style=for-the-badge&logo=vercel&logoColor=white)](https://my-portfolio-luisangel.vercel.app/)
+[![Portfolio Online](https://img.shields.io/badge/Portfolio-Online-22c55e?style=for-the-badge&logo=vercel&logoColor=white)](https://luisangel.vercel.app/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Luis%20Bustamante-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/luis-angel-bustamante-herazo-30882a258/)
 [![GitHub](https://img.shields.io/badge/GitHub-LuisAngel016-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/LuisAngel016)
 
@@ -132,7 +132,7 @@ npm run preview
 
 ## Links
 
-- Portfolio: `https://my-portfolio-luisangel.vercel.app/`
+- Portfolio: `https://luisangel.vercel.app/`
 - LinkedIn: `https://www.linkedin.com/in/luis-angel-bustamante-herazo-30882a258/`
 - GitHub: `https://github.com/LuisAngel016`
 - CV: `https://drive.google.com/file/d/1Jogra6jz__lh4w9tSg83w590c12waToj/view?usp=sharing`
