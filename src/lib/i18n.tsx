@@ -62,6 +62,7 @@ type TranslationSchema = {
         intro: string;
         items: Array<{
             period: string;
+            badge: string;
             role: string;
             company: string;
             summary: string;
@@ -157,6 +158,7 @@ const translations: Record<Language, TranslationSchema> = {
             items: [
                 {
                     period: '2022 - Actualidad',
+                    badge: 'Impacto',
                     role: 'Desarrollador Full Stack',
                     company: 'Proyectos de producto y soluciones digitales',
                     summary: 'Trabajo en aplicaciones orientadas a negocio con foco en arquitectura, experiencia de usuario y rendimiento.',
@@ -168,6 +170,7 @@ const translations: Record<Language, TranslationSchema> = {
                 },
                 {
                     period: 'Stack principal',
+                    badge: 'Stack principal',
                     role: 'React, TypeScript, NestJS, Flutter',
                     company: 'Frontend, backend y mobile',
                     summary: 'Me desenvuelvo en productos end-to-end, conectando la capa visual con logica de negocio y datos.',
@@ -296,6 +299,7 @@ const translations: Record<Language, TranslationSchema> = {
             items: [
                 {
                     period: '2022 - Present',
+                    badge: 'Impact',
                     role: 'Full Stack Developer',
                     company: 'Product and digital solution projects',
                     summary: 'I work on business-oriented applications with strong attention to architecture, user experience, and performance.',
@@ -307,6 +311,7 @@ const translations: Record<Language, TranslationSchema> = {
                 },
                 {
                     period: 'Core stack',
+                    badge: 'Core stack',
                     role: 'React, TypeScript, NestJS, Flutter',
                     company: 'Frontend, backend, and mobile',
                     summary: 'I am comfortable building end-to-end products, connecting the visual layer with business logic and data.',

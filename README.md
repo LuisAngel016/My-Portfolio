@@ -9,11 +9,8 @@ Portfolio personal desarrollado con React, TypeScript, Vite y Tailwind CSS para 
 ## Stack
 
 ![React](https://img.shields.io/badge/React-19-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![NestJS](https://img.shields.io/badge/NestJS-10-20232A?style=for-the-badge&logo=nestjs&logoColor=E0234E)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.7-20232A?style=for-the-badge&logo=typescript&logoColor=3178C6)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-v4-20232A?style=for-the-badge&logo=tailwindcss&logoColor=06B6D4)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-20232A?style=for-the-badge&logo=postgresql&logoColor=336791)
-![License](https://img.shields.io/badge/License-MIT-20232A?style=for-the-badge&logo=open-source-initiative&logoColor=A3E635)
 
 ## Vista previa
 
