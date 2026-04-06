@@ -6,7 +6,7 @@ export const Home = () => {
     const { language, t } = useLanguage();
 
     return (
-        <section className="flex flex-col md:flex-row justify-center items-center" id="home">
+        <section className="min-h-screen flex flex-col md:flex-row justify-center items-center" id="home">
             <div className="order-1 md:order-1">
                 <h3 className="text-[2.6rem] lg:text-[3.2rem] font-bold">{t.home.greeting}</h3>
                 <h1 className="text-[5rem] md:text-[5.6rem] font-bold leading-[1.3]">Luis Bustamante</h1>

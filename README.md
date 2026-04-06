@@ -1,95 +1,65 @@
-# Luis Bustamante | Portfolio Full Stack
+# Luis Bustamante | Full Stack Portfolio
+
+![Portfolio Banner](public/images/portfolio-banner.svg)
 
 [![Portfolio Online](https://img.shields.io/badge/Portfolio-Online-22c55e?style=for-the-badge&logo=vercel&logoColor=white)](https://my-portfolio-luisangel.vercel.app/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Luis%20Bustamante-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/luis-angel-bustamante-herazo-30882a258/)
 [![GitHub](https://img.shields.io/badge/GitHub-LuisAngel016-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/LuisAngel016)
 
-Portfolio personal desarrollado con React, TypeScript, Vite y Tailwind CSS para presentar mi perfil profesional, experiencia y proyectos destacados como desarrollador Full Stack.
+## ES
 
-## Stack
+Portfolio personal desarrollado con React, TypeScript, Vite y Tailwind CSS para presentar mi perfil profesional, experiencia, stack y proyectos reales como desarrollador Full Stack.
+
+### Stack
 
 ![React](https://img.shields.io/badge/React-19-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.7-20232A?style=for-the-badge&logo=typescript&logoColor=3178C6)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-v4-20232A?style=for-the-badge&logo=tailwindcss&logoColor=06B6D4)
 
-## Vista previa
+### Que muestra este portfolio
 
-![Portfolio Preview](public/images/me.png)
+- Presentacion personal bilingue ES/EN
+- Seccion About con propuesta de valor y highlights profesionales
+- Seccion Experience con timeline premium, chips de stack y logros
+- Showcase de proyectos reales con previews
+- Contacto directo, CV y enlaces profesionales
 
-## Sobre el proyecto
+### Proyectos destacados
 
-Este sitio concentra mi propuesta profesional en una sola experiencia:
-
-- Presentacion personal y perfil profesional
-- Seccion de habilidades tecnicas
-- Showcase de proyectos reales
-- Enlaces a GitHub, LinkedIn y CV
-- Formulario de contacto
-
-## Proyectos destacados
-
-### TesloShop
-
-E-commerce desarrollado con React y NestJS.
+#### TesloShop
 
 - Demo: `https://teslo-shop-frontend-lb.netlify.app/#/`
 - Credenciales: `test1@google.com / Abc123`
-- Preview:
 
 ![TesloShop](public/images/teslo-shop.png)
 
-### Heroes App
-
-Aplicacion de gestion de heroes desarrollada con React y NestJS.
+#### Heroes App
 
 - Demo: `https://heroes-app-universe.netlify.app/#/`
-- Preview:
 
 ![Heroes App](public/images/heroes.png)
 
-### En Los Labios Rubi
-
-E-commerce de belleza con foco en identidad visual, catalogo y experiencia de compra.
+#### En Los Labios Rubi
 
 - Demo: `https://enloslabiosrubi.com/`
-- Preview:
 
 ![En Los Labios Rubi](public/images/enloslabiosrubi.png)
 
-### Appointler
-
-SaaS para gestion de citas con landing publica y panel administrativo para el negocio.
+#### Appointler
 
 - Demo: `https://appointler.netlify.app/`
-- Landing:
 
 ![Appointler Landing](public/images/appointler%202.png)
-
-- Admin:
-
 ![Appointler Admin](public/images/appointler.png)
 
-## Secciones del portfolio
-
-- Inicio
-- Sobre mi
-- Habilidades
-- Proyectos
-- Contacto
-
-## Instalacion
+### Desarrollo local
 
 ```bash
 npm install
-```
-
-## Desarrollo local
-
-```bash
 npm run dev
 ```
 
-## Scripts disponibles
+### Scripts
 
 ```bash
 npm run dev
@@ -98,25 +68,71 @@ npm run lint
 npm run preview
 ```
 
-## Estructura principal
+## EN
 
-```text
-src/
-  components/
-  hooks/
-  lib/
-  styles/
-public/
-  images/
+Personal portfolio built with React, TypeScript, Vite, and Tailwind CSS to showcase my professional profile, experience, stack, and real-world projects as a Full Stack Developer.
+
+### Stack
+
+![React](https://img.shields.io/badge/React-19-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.7-20232A?style=for-the-badge&logo=typescript&logoColor=3178C6)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-v4-20232A?style=for-the-badge&logo=tailwindcss&logoColor=06B6D4)
+
+### What this portfolio includes
+
+- Bilingual ES/EN presentation
+- About section with value proposition and professional highlights
+- Premium Experience section with timeline, stack chips, and impact points
+- Real project showcase with previews
+- Direct contact, CV, and professional links
+
+### Featured projects
+
+#### TesloShop
+
+- Demo: `https://teslo-shop-frontend-lb.netlify.app/#/`
+- Credentials: `test1@google.com / Abc123`
+
+![TesloShop](public/images/teslo-shop.png)
+
+#### Heroes App
+
+- Demo: `https://heroes-app-universe.netlify.app/#/`
+
+![Heroes App](public/images/heroes.png)
+
+#### En Los Labios Rubi
+
+- Demo: `https://enloslabiosrubi.com/`
+
+![En Los Labios Rubi](public/images/enloslabiosrubi.png)
+
+#### Appointler
+
+- Demo: `https://appointler.netlify.app/`
+
+![Appointler Landing](public/images/appointler%202.png)
+![Appointler Admin](public/images/appointler.png)
+
+### Local development
+
+```bash
+npm install
+npm run dev
 ```
 
-## Enlaces
+### Scripts
+
+```bash
+npm run dev
+npm run build
+npm run lint
+npm run preview
+```
+
+## Links
 
 - Portfolio: `https://my-portfolio-luisangel.vercel.app/`
 - LinkedIn: `https://www.linkedin.com/in/luis-angel-bustamante-herazo-30882a258/`
 - GitHub: `https://github.com/LuisAngel016`
 - CV: `https://drive.google.com/file/d/1Jogra6jz__lh4w9tSg83w590c12waToj/view?usp=sharing`
-
-## Autor
-
-Luis Bustamante
