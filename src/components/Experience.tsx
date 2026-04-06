@@ -17,6 +17,60 @@ const techAccent: Record<string, string> = {
     'TanStack Query': 'bg-orange-400'
 };
 
+const TechLogo = ({ tech }: { tech: string }) => {
+    switch (tech) {
+        case 'React':
+            return (
+                <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" aria-hidden="true">
+                    <circle cx="12" cy="12" r="1.8" fill="#61DAFB" />
+                    <ellipse cx="12" cy="12" rx="8" ry="3.2" stroke="#61DAFB" strokeWidth="1.6" />
+                    <ellipse cx="12" cy="12" rx="8" ry="3.2" stroke="#61DAFB" strokeWidth="1.6" transform="rotate(60 12 12)" />
+                    <ellipse cx="12" cy="12" rx="8" ry="3.2" stroke="#61DAFB" strokeWidth="1.6" transform="rotate(120 12 12)" />
+                </svg>
+            );
+        case 'TypeScript':
+            return (
+                <svg viewBox="0 0 24 24" className="h-5 w-5" aria-hidden="true">
+                    <rect x="3" y="3" width="18" height="18" rx="4" fill="#3178C6" />
+                    <text x="12" y="15.2" textAnchor="middle" fill="white" fontSize="8.2" fontWeight="700" fontFamily="Arial, sans-serif">TS</text>
+                </svg>
+            );
+        case 'NestJS':
+            return (
+                <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" aria-hidden="true">
+                    <path d="M12 3L18.5 7.5L16.5 18L12 21L7.5 18L5.5 7.5L12 3Z" fill="#E0234E" />
+                    <path d="M9 16V8L15 16V8" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+            );
+        case 'PostgreSQL':
+            return (
+                <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" aria-hidden="true">
+                    <path d="M12 4C8.7 4 7 6.2 7 9.6V16C7 18 8.4 19 10 19C11.1 19 11.9 18.5 12.5 17.9C13 18.6 13.9 19 15 19C16.7 19 18 17.7 18 15.8V9.8C18 6.1 15.9 4 12 4Z" fill="#336791" />
+                    <circle cx="10.3" cy="9.6" r="0.8" fill="white" />
+                    <circle cx="13.9" cy="9.6" r="0.8" fill="white" />
+                    <path d="M10 13C11.2 13.8 12.8 13.8 14 13" stroke="white" strokeWidth="1.4" strokeLinecap="round" />
+                </svg>
+            );
+        case 'Flutter':
+            return (
+                <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" aria-hidden="true">
+                    <path d="M6 14L12 8L15 11L9 17L6 14Z" fill="#47C5FB" />
+                    <path d="M12 20L18 14L15 11L9 17L12 20Z" fill="#00569E" />
+                    <path d="M9 17L12 14L15 17L12 20L9 17Z" fill="#00B5F8" />
+                </svg>
+            );
+        case 'TanStack Query':
+            return (
+                <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" aria-hidden="true">
+                    <circle cx="12" cy="12" r="8" stroke="#FF8C00" strokeWidth="2" strokeDasharray="18 8" />
+                    <circle cx="12" cy="12" r="2.2" fill="#FF4154" />
+                </svg>
+            );
+        default:
+            return <span className={`h-3 w-3 rounded-full ${techAccent[tech] ?? 'bg-[var(--main-color)]'}`} />;
+    }
+};
+
 type ExperienceItemData = {
     period: string;
     badge: string;
@@ -66,7 +120,7 @@ const ExperienceItem = ({ item, index }: { item: ExperienceItemData; index: numb
                             key={tech}
                             className="inline-flex items-center gap-3 rounded-full border border-[var(--main-color)]/20 bg-[rgba(14,255,255,0.08)] px-4 py-2 text-[1.25rem] font-semibold uppercase tracking-[0.12rem] text-[var(--main-color)] transition-all duration-300 hover:-translate-y-0.5 hover:border-[var(--main-color)]/40 hover:bg-[rgba(14,255,255,0.14)]"
                         >
-                            <span className={`h-3 w-3 rounded-full ${techAccent[tech] ?? 'bg-[var(--main-color)]'}`} />
+                            <TechLogo tech={tech} />
                             {tech}
                         </span>
                     ))}
