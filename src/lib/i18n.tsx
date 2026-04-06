@@ -94,7 +94,7 @@ const translations: Record<Language, TranslationSchema> = {
     es: {
         nav: {
             home: 'Inicio',
-            about: 'Sobre mi',
+            about: 'Sobre mí',
             experience: 'Experiencia',
             skills: 'Habilidades',
             portfolio: 'Proyectos',
@@ -109,27 +109,27 @@ const translations: Record<Language, TranslationSchema> = {
             greeting: 'Hola, soy',
             rolePrefix: 'Soy',
             roles: ['Desarrollador Full Stack'],
-            description: 'Desarrollador de software con +3 anos de experiencia en el diseno y desarrollo de aplicaciones web, moviles y de escritorio.',
+            description: 'Desarrollador de software con más de 3 años de experiencia diseñando y construyendo aplicaciones web, móviles y de escritorio.',
             cvButton: 'Descargar CV'
         },
         about: {
             profileLabel: 'Perfil profesional',
             profileTitle: 'Desarrollador Full Stack',
             profileDescription: 'Construyo productos digitales enfocados en negocio, rendimiento y experiencia de usuario.',
-            eyebrow: 'Acerca de mi',
-            title: 'Desarrollo experiencias intuitivas que tambien',
+            eyebrow: 'Acerca de mí',
+            title: 'Desarrollo experiencias intuitivas que también',
             titleHighlight: 'resuelven problemas reales',
-            description: 'Soy Luis Bustamante, desarrollador de software con experiencia en aplicaciones web, moviles y de escritorio. He trabajado en productos que optimizan procesos de negocio, automatizan flujos y mejoran la toma de decisiones con interfaces claras, arquitectura solida y foco en escalabilidad.',
+            description: 'Soy Luis Bustamante, desarrollador de software con experiencia en aplicaciones web, móviles y de escritorio. He trabajado en productos que optimizan procesos de negocio, automatizan flujos y mejoran la toma de decisiones con interfaces claras, arquitectura sólida y foco en escalabilidad.',
             highlights: [
-                'Experiencia construyendo soluciones web, moviles y de escritorio.',
-                'Participacion en sistemas de inventario, facturacion, reportes PDF y dashboards.',
-                'Enfoque en rendimiento, calidad de codigo y experiencia de usuario.'
+                'Experiencia construyendo soluciones web, móviles y de escritorio.',
+                'Participación en sistemas de inventario, facturación, reportes PDF y dashboards.',
+                'Enfoque en rendimiento, calidad de código y experiencia de usuario.'
             ],
             stats: [
-                { value: '+3', label: 'anos de experiencia' },
+                { value: '+3', label: 'años de experiencia' },
                 { value: 'Full Stack', label: 'desarrollo end to end' },
                 { value: 'Impacto real', label: 'productos y procesos' },
-                { value: 'Mejora continua', label: 'optimizacion y aprendizaje' }
+                { value: 'Mejora continua', label: 'optimización y aprendizaje' }
             ],
             projectsButton: 'Ver proyectos',
             cvButton: 'Ver CV'
@@ -140,47 +140,47 @@ const translations: Record<Language, TranslationSchema> = {
             items: [
                 {
                     title: 'Desarrollo web',
-                    description: 'Especializado en desarrollo full stack con React, TypeScript, TanStack Query, Nest y tecnologias modernas. Creo interfaces responsivas y soluciones escalables para productos web.'
+                    description: 'Especializado en desarrollo full stack con React, TypeScript, TanStack Query, Nest y tecnologías modernas. Creo interfaces responsivas y soluciones escalables para productos web.'
                 },
                 {
-                    title: 'Diseno de interfaces',
-                    description: 'Diseno experiencias atractivas y funcionales con foco en UX/UI, consistencia visual y claridad en cada flujo del producto.'
+                    title: 'Diseño de interfaces',
+                    description: 'Diseño experiencias atractivas y funcionales con foco en UX/UI, consistencia visual y claridad en cada flujo del producto.'
                 },
                 {
-                    title: 'Desarrollo movil',
-                    description: 'Construyo aplicaciones moviles con Flutter y React Native, priorizando rendimiento, mantenibilidad y una experiencia solida para el usuario final.'
+                    title: 'Desarrollo móvil',
+                    description: 'Construyo aplicaciones móviles con Flutter y React Native, priorizando rendimiento, mantenibilidad y una experiencia sólida para el usuario final.'
                 }
             ]
         },
         experience: {
             title: 'Mi',
             titleHighlight: 'experiencia',
-            intro: 'He participado en proyectos donde el software no era solo una interfaz, sino una herramienta para mejorar operaciones, automatizar procesos y generar resultados medibles.',
+            intro: 'He trabajado en productos donde el software no era solo una interfaz, sino una herramienta para mejorar operaciones, automatizar procesos y dar soporte real a decisiones de negocio.',
             items: [
                 {
                     period: '2022 - Actualidad',
                     badge: 'Impacto',
                     role: 'Desarrollador Full Stack',
-                    company: 'Proyectos de producto y soluciones digitales',
-                    summary: 'Trabajo en aplicaciones orientadas a negocio con foco en arquitectura, experiencia de usuario y rendimiento.',
+                    company: 'Productos internos, dashboards y herramientas operativas',
+                    summary: 'He desarrollado soluciones enfocadas en operación, control y visibilidad del negocio, combinando frontend, backend y diseño de flujos útiles para usuarios reales.',
                     stack: ['React', 'TypeScript', 'NestJS', 'PostgreSQL'],
                     achievements: [
-                        'Implementacion de flujos de inventario y facturacion para operaciones internas.',
-                        'Construccion de dashboards comparativos y reportes PDF para toma de decisiones.',
-                        'Desarrollo de interfaces web y moviles con enfoque en escalabilidad y mantenibilidad.'
+                        'Implementación de flujos de inventario y facturación para operaciones internas.',
+                        'Construcción de dashboards comparativos y reportes PDF para apoyar la toma de decisiones.',
+                        'Desarrollo de interfaces web y móviles con foco en escalabilidad, claridad y mantenibilidad.'
                     ]
                 },
                 {
                     period: 'Stack principal',
                     badge: 'Stack principal',
                     role: 'React, TypeScript, NestJS, Flutter',
-                    company: 'Frontend, backend y mobile',
-                    summary: 'Me desenvuelvo en productos end-to-end, conectando la capa visual con logica de negocio y datos.',
+                    company: 'Frontend, backend y móvil',
+                    summary: 'Me desenvuelvo en productos end-to-end, conectando la capa visual con lógica de negocio, APIs y persistencia de datos.',
                     stack: ['React', 'TanStack Query', 'NestJS', 'Flutter'],
                     achievements: [
-                        'Interfaces modernas y responsivas orientadas a conversion y productividad.',
-                        'Integracion de APIs, formularios, paneles de administracion y modulos de negocio.',
-                        'Optimizacion de experiencia de usuario, estructura de codigo y tiempos de entrega.'
+                        'Interfaces modernas y responsivas orientadas a conversión y productividad.',
+                        'Integración de APIs, formularios, paneles de administración y módulos de negocio.',
+                        'Optimización de experiencia de usuario, estructura de código y tiempos de entrega.'
                     ]
                 }
             ]
@@ -202,21 +202,21 @@ const translations: Record<Language, TranslationSchema> = {
                     images: ['/images/heroes.png'],
                     title: 'Heroes App',
                     url: 'https://heroes-app-universe.netlify.app/#/',
-                    description: 'Aplicacion de gestion de heroes desarrollada con React y NestJS.'
+                    description: 'Aplicación de gestión de héroes desarrollada con React y NestJS.'
                 },
                 {
                     id: 3,
                     images: ['/images/enloslabiosrubi.png'],
                     title: 'En Los Labios Rubi',
                     url: 'https://enloslabiosrubi.com/',
-                    description: 'E-commerce de belleza con foco en experiencia de compra, identidad visual y catalogo online.'
+                    description: 'E-commerce de belleza con foco en experiencia de compra, identidad visual y catálogo online.'
                 },
                 {
                     id: 4,
                     images: ['/images/appointler 2.png', '/images/appointler.png'],
                     title: 'Appointler',
                     url: 'https://appointler.netlify.app/',
-                    description: 'SaaS para gestion de citas con landing publica y panel administrativo en una misma presentacion.'
+                    description: 'SaaS para gestión de citas con landing pública y panel administrativo en una misma presentación.'
                 }
             ]
         },
@@ -224,8 +224,8 @@ const translations: Record<Language, TranslationSchema> = {
             title: 'Contacta',
             titleHighlight: 'conmigo',
             name: 'Nombre completo',
-            email: 'Correo electronico',
-            phone: 'Telefono',
+            email: 'Correo electrónico',
+            phone: 'Teléfono',
             subject: 'Asunto',
             message: 'Tu mensaje',
             submit: 'Enviar mensaje'

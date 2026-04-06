@@ -74,7 +74,7 @@ export const Portfolio = () => {
     const projects: Project[] = t.portfolio.projects;
 
     return (
-        <section className="bg-[var(--second-bg-color)]" id="portfolio">
+        <section className="bg-[var(--second-bg-color)] pt-[12rem]" id="portfolio">
             <h2 className="heading">
                 {t.portfolio.title} <span>{t.portfolio.titleHighlight}</span>
             </h2>

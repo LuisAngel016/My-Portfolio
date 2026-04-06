@@ -20,7 +20,7 @@ export const Skills = () => {
     ];
 
     return (
-        <section className="skills" id="skills">
+        <section className="skills pb-[12rem] md:pb-[16rem]" id="skills">
             <h2 className="heading">
                 {t.skills.title} <span>{t.skills.titleHighlight}</span>
             </h2>
