@@ -39,7 +39,7 @@ const ExperienceItem = ({ item, index }: { item: ExperienceItemData; index: numb
                 {icons[index % icons.length]}
             </div>
 
-            <div className={`absolute left-[3.5rem] top-[6.8rem] hidden h-6 w-6 -translate-x-1/2 rounded-full border-4 border-[var(--bg-color)] bg-[var(--main-color)] shadow-[0_0_1rem_rgba(14,255,255,0.45)] md:block transition-all duration-700 ${isVisible ? 'scale-100 opacity-100' : 'scale-50 opacity-0'}`} />
+            <div className={`absolute left-[3.5rem] top-[6.8rem] hidden h-6 w-6 -translate-x-1/2 rounded-full border-4 border-[var(--bg-color)] bg-[var(--main-color)] shadow-[0_0_1rem_rgba(14,255,255,0.45)] md:block transition-all duration-700 ${isVisible ? 'scale-100 opacity-100 animate-[timelinePulse_3.2s_ease-in-out_infinite]' : 'scale-50 opacity-0'}`} />
 
             <div className="relative overflow-hidden rounded-[2.6rem] border border-white/10 bg-[linear-gradient(180deg,rgba(50,57,70,0.72),rgba(31,36,45,0.88))] p-8 shadow-[0_0_2rem_rgba(0,0,0,0.16)] backdrop-blur-sm transition-transform duration-500 hover:-translate-y-1">
                 <div className="absolute right-0 top-0 h-36 w-36 rounded-full bg-[rgba(14,255,255,0.08)] blur-3xl" />
