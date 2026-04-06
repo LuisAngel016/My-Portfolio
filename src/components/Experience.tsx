@@ -8,6 +8,15 @@ const icons = [
     <ChartNoAxesCombined key="chart" size={24} />
 ];
 
+const techAccent: Record<string, string> = {
+    React: 'bg-sky-400',
+    TypeScript: 'bg-blue-500',
+    NestJS: 'bg-rose-500',
+    PostgreSQL: 'bg-indigo-400',
+    Flutter: 'bg-cyan-400',
+    'TanStack Query': 'bg-orange-400'
+};
+
 type ExperienceItemData = {
     period: string;
     badge: string;
@@ -26,11 +35,15 @@ const ExperienceItem = ({ item, index }: { item: ExperienceItemData; index: numb
             ref={ref}
             className={`relative md:pl-28 transition-all duration-700 ease-out ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}
         >
-            <div className="absolute left-0 top-4 hidden h-18 w-18 items-center justify-center rounded-full border border-[var(--main-color)]/35 bg-[rgba(14,255,255,0.1)] text-[var(--main-color)] shadow-[0_0_1.2rem_rgba(14,255,255,0.12)] md:flex">
+            <div className={`absolute left-0 top-4 hidden h-18 w-18 items-center justify-center rounded-full border border-[var(--main-color)]/35 bg-[rgba(14,255,255,0.1)] text-[var(--main-color)] shadow-[0_0_1.2rem_rgba(14,255,255,0.12)] md:flex transition-all duration-700 ${isVisible ? 'scale-100 opacity-100' : 'scale-75 opacity-0'}`}>
                 {icons[index % icons.length]}
             </div>
 
-            <div className="rounded-[2.6rem] border border-white/10 bg-[linear-gradient(180deg,rgba(50,57,70,0.72),rgba(31,36,45,0.88))] p-8 shadow-[0_0_2rem_rgba(0,0,0,0.16)] backdrop-blur-sm transition-transform duration-500 hover:-translate-y-1">
+            <div className={`absolute left-[3.5rem] top-[6.8rem] hidden h-6 w-6 -translate-x-1/2 rounded-full border-4 border-[var(--bg-color)] bg-[var(--main-color)] shadow-[0_0_1rem_rgba(14,255,255,0.45)] md:block transition-all duration-700 ${isVisible ? 'scale-100 opacity-100' : 'scale-50 opacity-0'}`} />
+
+            <div className="relative overflow-hidden rounded-[2.6rem] border border-white/10 bg-[linear-gradient(180deg,rgba(50,57,70,0.72),rgba(31,36,45,0.88))] p-8 shadow-[0_0_2rem_rgba(0,0,0,0.16)] backdrop-blur-sm transition-transform duration-500 hover:-translate-y-1">
+                <div className="absolute right-0 top-0 h-36 w-36 rounded-full bg-[rgba(14,255,255,0.08)] blur-3xl" />
+
                 <div className="mb-6 flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
                     <div>
                         <p className="text-[1.3rem] uppercase tracking-[0.28rem] text-[var(--main-color)]">{item.period}</p>
@@ -51,8 +64,9 @@ const ExperienceItem = ({ item, index }: { item: ExperienceItemData; index: numb
                     {item.stack.map((tech) => (
                         <span
                             key={tech}
-                            className="rounded-full border border-[var(--main-color)]/20 bg-[rgba(14,255,255,0.08)] px-4 py-2 text-[1.25rem] font-semibold uppercase tracking-[0.12rem] text-[var(--main-color)]"
+                            className="inline-flex items-center gap-3 rounded-full border border-[var(--main-color)]/20 bg-[rgba(14,255,255,0.08)] px-4 py-2 text-[1.25rem] font-semibold uppercase tracking-[0.12rem] text-[var(--main-color)] transition-all duration-300 hover:-translate-y-0.5 hover:border-[var(--main-color)]/40 hover:bg-[rgba(14,255,255,0.14)]"
                         >
+                            <span className={`h-3 w-3 rounded-full ${techAccent[tech] ?? 'bg-[var(--main-color)]'}`} />
                             {tech}
                         </span>
                     ))}
