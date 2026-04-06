@@ -8,6 +8,8 @@ type PortfolioProject = {
     url: string;
     description: string;
     images: string[];
+    category: string;
+    stack: string[];
     credentials?: string;
 };
 
@@ -194,6 +196,8 @@ const translations: Record<Language, TranslationSchema> = {
                     images: ['/images/teslo-shop.png'],
                     title: 'TesloShop',
                     url: 'https://teslo-shop-frontend-lb.netlify.app/#/',
+                    category: 'E-commerce',
+                    stack: ['React', 'NestJS', 'TypeScript'],
                     credentials: 'user: test1@google.com | pass: Abc123',
                     description: 'E-commerce desarrollado con React y NestJS.'
                 },
@@ -202,6 +206,8 @@ const translations: Record<Language, TranslationSchema> = {
                     images: ['/images/heroes.png'],
                     title: 'Heroes App',
                     url: 'https://heroes-app-universe.netlify.app/#/',
+                    category: 'Dashboard app',
+                    stack: ['React', 'NestJS', 'TypeScript'],
                     description: 'Aplicación de gestión de héroes desarrollada con React y NestJS.'
                 },
                 {
@@ -209,6 +215,8 @@ const translations: Record<Language, TranslationSchema> = {
                     images: ['/images/enloslabiosrubi.png'],
                     title: 'En Los Labios Rubi',
                     url: 'https://enloslabiosrubi.com/',
+                    category: 'Beauty store',
+                    stack: ['React', 'TypeScript', 'E-commerce'],
                     description: 'E-commerce de belleza con foco en experiencia de compra, identidad visual y catálogo online.'
                 },
                 {
@@ -216,6 +224,8 @@ const translations: Record<Language, TranslationSchema> = {
                     images: ['/images/appointler 2.png', '/images/appointler.png'],
                     title: 'Appointler',
                     url: 'https://appointler.netlify.app/',
+                    category: 'SaaS',
+                    stack: ['React', 'TypeScript', 'NestJS'],
                     description: 'SaaS para gestión de citas con landing pública y panel administrativo en una misma presentación.'
                 }
             ]
@@ -337,6 +347,8 @@ const translations: Record<Language, TranslationSchema> = {
                     images: ['/images/teslo-shop.png'],
                     title: 'TesloShop',
                     url: 'https://teslo-shop-frontend-lb.netlify.app/#/',
+                    category: 'E-commerce',
+                    stack: ['React', 'NestJS', 'TypeScript'],
                     credentials: 'user: test1@google.com | pass: Abc123',
                     description: 'E-commerce project built with React and NestJS.'
                 },
@@ -345,6 +357,8 @@ const translations: Record<Language, TranslationSchema> = {
                     images: ['/images/heroes.png'],
                     title: 'Heroes App',
                     url: 'https://heroes-app-universe.netlify.app/#/',
+                    category: 'Dashboard app',
+                    stack: ['React', 'NestJS', 'TypeScript'],
                     description: 'Hero management application built with React and NestJS.'
                 },
                 {
@@ -352,6 +366,8 @@ const translations: Record<Language, TranslationSchema> = {
                     images: ['/images/enloslabiosrubi.png'],
                     title: 'En Los Labios Rubi',
                     url: 'https://enloslabiosrubi.com/',
+                    category: 'Beauty store',
+                    stack: ['React', 'TypeScript', 'E-commerce'],
                     description: 'Beauty e-commerce focused on shopping experience, visual branding, and online catalog presentation.'
                 },
                 {
@@ -359,6 +375,8 @@ const translations: Record<Language, TranslationSchema> = {
                     images: ['/images/appointler 2.png', '/images/appointler.png'],
                     title: 'Appointler',
                     url: 'https://appointler.netlify.app/',
+                    category: 'SaaS',
+                    stack: ['React', 'TypeScript', 'NestJS'],
                     description: 'Appointment management SaaS with a public landing page and admin dashboard showcased in a single card.'
                 }
             ]

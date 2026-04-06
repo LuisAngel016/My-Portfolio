@@ -8,6 +8,8 @@ type Project = {
     url: string;
     description: string;
     images: string[];
+    category: string;
+    stack: string[];
     credentials?: string;
 };
 
@@ -30,23 +32,44 @@ const PortfolioCard = ({ project }: { project: Project }) => {
     }, [hasMultipleImages, project.images.length]);
 
     return (
-        <div className="relative rounded-[2rem] shadow-[0_0_1rem_var(--bg-color)] overflow-hidden flex group">
+        <div className="relative rounded-[2rem] shadow-[0_0_1rem_var(--bg-color)] overflow-hidden flex group border border-white/8 bg-[rgba(31,36,45,0.55)]">
             <img
                 src={project.images[imageIndex]}
                 alt={project.title}
                 className="w-full h-[350px] object-cover object-center transition-transform duration-500 ease-in-out group-hover:scale-110"
             />
 
-            {hasMultipleImages && (
-                <div className="absolute top-5 right-5 flex gap-2 z-10">
-                    {project.images.map((_, index) => (
+            <div className="absolute inset-x-0 top-0 z-10 flex items-start justify-between p-5">
+                <span className="rounded-full border border-white/12 bg-[rgba(0,0,0,0.28)] px-4 py-2 text-[1.1rem] font-semibold uppercase tracking-[0.16rem] text-white backdrop-blur-sm">
+                    {project.category}
+                </span>
+
+                {hasMultipleImages && (
+                    <div className="flex gap-2">
+                        {project.images.map((_, index) => (
+                            <span
+                                key={`${project.id}-${index}`}
+                                className={`h-3 w-3 rounded-full transition-colors duration-300 ${index === imageIndex ? 'bg-white' : 'bg-white/40'}`}
+                            />
+                        ))}
+                    </div>
+                )}
+            </div>
+
+            <div className="absolute inset-x-0 bottom-0 z-10 bg-[linear-gradient(180deg,rgba(10,12,17,0),rgba(10,12,17,0.92))] p-6 pt-16">
+                <h4 className="text-[2.6rem] font-bold text-white">{project.title}</h4>
+                <p className="mt-2 text-[1.45rem] leading-relaxed text-white/80">{project.description}</p>
+                <div className="mt-4 flex flex-wrap gap-2">
+                    {project.stack.map((tech) => (
                         <span
-                            key={`${project.id}-${index}`}
-                            className={`h-3 w-3 rounded-full transition-colors duration-300 ${index === imageIndex ? 'bg-white' : 'bg-white/40'}`}
-                        />
+                            key={`${project.id}-${tech}`}
+                            className="rounded-full border border-white/10 bg-white/8 px-3 py-2 text-[1.05rem] font-semibold uppercase tracking-[0.12rem] text-white/85 backdrop-blur-sm"
+                        >
+                            {tech}
+                        </span>
                     ))}
                 </div>
-            )}
+            </div>
 
             <div className="absolute bottom-0 left-0 w-full h-full bg-gradient-to-t from-[var(--main-color)] to-[rgba(0,0,0,0.1)] flex justify-center items-center flex-col text-center px-16 transform translate-y-full transition-transform duration-500 ease-in-out group-hover:translate-y-0">
                 <h4 className="text-[3rem] font-bold text-white">{project.title}</h4>
