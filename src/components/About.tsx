@@ -12,19 +12,19 @@ export const About = () => {
     const { t } = useLanguage();
 
     return (
-        <section className="flex flex-col lg:flex-row justify-center items-center gap-16 bg-[var(--second-bg-color)]" id="about">
+        <section className="flex flex-col lg:flex-row justify-center items-center gap-16" id="about">
             <div className="w-full lg:w-[38%] flex justify-center">
                 <div className="relative w-full max-w-[40rem]">
                     <div className="absolute -inset-3 rounded-[3rem] bg-[linear-gradient(135deg,rgba(14,255,255,0.28),rgba(14,255,255,0.03))] blur-xl" />
 
-                    <div className="relative rounded-[3rem] border border-white/10 bg-[rgba(31,36,45,0.7)] p-6 shadow-[0_0_2rem_rgba(14,255,255,0.08)] backdrop-blur-sm">
+                    <div className="relative rounded-[3rem] border border-white/10 bg-[rgba(20,25,34,0.62)] p-6 shadow-[0_0_2rem_rgba(14,255,255,0.08)] backdrop-blur-sm">
                         <img
                             src="/images/me.png"
                             alt="Luis Bustamante"
                             className="w-full rounded-[2.4rem] object-cover"
                         />
 
-                        <div className="mt-6 rounded-[2rem] border border-[var(--main-color)]/30 bg-[rgba(14,255,255,0.08)] p-6">
+                        <div className="mt-6 rounded-[2rem] border border-[var(--main-color)]/25 bg-[rgba(14,255,255,0.06)] p-6">
                             <p className="text-[1.4rem] uppercase tracking-[0.25rem] text-[var(--main-color)]">{t.about.profileLabel}</p>
                             <h3 className="mt-3 text-[2.4rem] font-semibold">{t.about.profileTitle}</h3>
                             <p className="mt-3 text-[1.5rem] leading-relaxed text-white/80">
@@ -50,7 +50,7 @@ export const About = () => {
                     {t.about.highlights.map((highlight) => (
                         <div
                             key={highlight}
-                            className="rounded-[2rem] border border-white/10 bg-[rgba(31,36,45,0.7)] p-6 text-[1.6rem] leading-relaxed text-white/85 shadow-[0_0_1.2rem_rgba(0,0,0,0.15)]"
+                            className="rounded-[2rem] border border-white/10 bg-[rgba(17,21,29,0.56)] p-6 text-[1.6rem] leading-relaxed text-white/85 shadow-[0_0_1.2rem_rgba(0,0,0,0.15)]"
                         >
                             {highlight}
                         </div>
@@ -61,7 +61,7 @@ export const About = () => {
                     {t.about.stats.map((stat, index) => (
                         <div
                             key={stat.label}
-                            className="rounded-[2rem] border border-[var(--main-color)]/20 bg-[rgba(14,255,255,0.05)] p-6 shadow-[0_0_1rem_rgba(14,255,255,0.06)]"
+                            className="rounded-[2rem] border border-[var(--main-color)]/20 bg-[rgba(14,255,255,0.04)] p-6 shadow-[0_0_1rem_rgba(14,255,255,0.06)]"
                         >
                             <div className="mb-4 inline-flex rounded-full border border-[var(--main-color)]/30 p-3 text-[var(--main-color)]">
                                 {statIcons[index]}

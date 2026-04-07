@@ -6,3 +6,4 @@ export { Skills } from './Skills';
 export { Portfolio } from './Portfolio';
 export { Contact } from './Contact';
 export { Footer } from './Footer';
+export { LiquidEtherBackground } from './LiquidEtherBackground';

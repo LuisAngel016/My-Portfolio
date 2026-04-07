@@ -5,7 +5,7 @@ export const Footer = () => {
     const { t } = useLanguage();
 
     return (
-        <footer className="flex justify-between items-center flex-wrap px-[2.5%] lg:px-[9%] py-8.5 bg-[var(--second-bg-color)]">
+        <footer className="glass-surface flex justify-between items-center flex-wrap px-[2.5%] lg:px-[9%] py-8.5 border-t border-white/10">
             <div className="footer-text">
                 <p className="text-2xl">{t.footer.copyright}</p>
             </div>

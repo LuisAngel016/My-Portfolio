@@ -145,7 +145,7 @@ export const Experience = () => {
     const { t } = useLanguage();
 
     return (
-        <section className="bg-[var(--bg-color)] py-[10rem]" id="experience">
+        <section className="py-[10rem]" id="experience">
             <h2 className="heading">
                 {t.experience.title} <span>{t.experience.titleHighlight}</span>
             </h2>
