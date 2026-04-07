@@ -37,7 +37,7 @@ export const Header = () => {
 
     return (
         <header
-            className={`fixed top-0 left-0 w-full px-[2.5%] lg:px-[7%] py-8 bg-[var(--bg-color)] flex justify-between items-center z-[100] ${isSticky ? 'border-b border-black/20' : ''}`}
+            className={`glass-surface fixed top-0 left-0 w-full px-[2.5%] lg:px-[7%] py-8 flex justify-between items-center z-[100] ${isSticky ? 'border-b border-white/10' : ''}`}
         >
             <a href="#" className="text-4xl text-[var(--main-color)] font-semibold cursor-default">
                 Luis Angel
@@ -50,7 +50,7 @@ export const Header = () => {
                 {menuOpen ? <X size={36} /> : <Menu size={36} />}
             </div>
 
-            <div className={`${menuOpen ? 'block' : 'hidden'} md:flex md:items-center md:gap-6 absolute md:relative top-full md:top-0 left-0 md:left-auto w-full md:w-auto px-[3%] md:px-0 py-4 md:py-0 bg-[var(--bg-color)] md:bg-transparent border-t md:border-t-0 border-black/20 shadow-md md:shadow-none`}>
+            <div className={`${menuOpen ? 'block' : 'hidden'} md:flex md:items-center md:gap-6 absolute md:relative top-full md:top-0 left-0 md:left-auto w-full md:w-auto px-[3%] md:px-0 py-4 md:py-0 bg-[rgba(13,18,26,0.94)] md:bg-transparent border-t md:border-t-0 border-white/10 shadow-md md:shadow-none`}>
                 <nav>
                     <a
                         href="#home"
