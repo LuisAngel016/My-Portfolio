@@ -234,7 +234,7 @@ const translations: Record<Language, TranslationSchema> = {
                     title: 'Maison Blanche',
                     url: 'https://maison-blanche-stays.vercel.app/es',
                     category: 'Hotel boutique',
-                    stack: ['Landing Page', 'Responsive UI', 'Brand Experience'],
+                    stack: ['Astro', 'Tailwind', 'TypeScript'],
                     description: 'Landing premium para hotel boutique con una propuesta visual elegante, foco en reservas y secciones de suites, spa, restaurante y galería.'
                 }
             ]
@@ -394,7 +394,7 @@ const translations: Record<Language, TranslationSchema> = {
                     title: 'Maison Blanche',
                     url: 'https://maison-blanche-stays.vercel.app/es',
                     category: 'Boutique hotel',
-                    stack: ['Landing Page', 'Responsive UI', 'Brand Experience'],
+                    stack: ['Astro', 'Tailwind', 'TypeScript'],
                     description: 'Premium landing page for a boutique hotel with an elegant visual system, booking-focused flows, and sections for suites, spa, restaurant, and gallery.'
                 }
             ]
