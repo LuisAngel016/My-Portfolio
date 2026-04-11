@@ -35,11 +35,23 @@ const PortfolioCard = ({ project }: { project: Project }) => {
             className="group relative flex cursor-pointer overflow-hidden rounded-[2rem] border border-white/10 bg-[rgba(31,36,45,0.55)] shadow-[0_10px_30px_rgba(0,0,0,0.28)] transition-all duration-500 ease-out hover:-translate-y-1 hover:border-[rgba(14,255,255,0.35)] hover:shadow-[0_18px_48px_rgba(0,0,0,0.42)]"
             onClick={() => window.open(project.url, '_blank', 'noopener,noreferrer')}
         >
-            <img
-                src={project.images[imageIndex]}
-                alt={project.title}
-                className="h-[350px] w-full object-cover object-center transition-all duration-700 ease-out group-hover:scale-[1.06] group-hover:brightness-[0.95]"
-            />
+            <div className="relative h-[350px] w-full overflow-hidden">
+                {project.images.map((image, index) => {
+                    const isActive = index === imageIndex;
+
+                    return (
+                        <img
+                            key={`${project.id}-${image}`}
+                            src={image}
+                            alt={isActive ? project.title : ''}
+                            aria-hidden={!isActive}
+                            loading="lazy"
+                            decoding="async"
+                            className={`absolute inset-0 h-full w-full object-cover object-center transition-all duration-700 ease-out group-hover:scale-[1.06] group-hover:brightness-[0.95] ${isActive ? 'opacity-100' : 'opacity-0'}`}
+                        />
+                    );
+                })}
+            </div>
 
             <div className="absolute inset-x-0 top-0 z-10 flex items-start justify-between p-5">
                 <span className="rounded-full border border-white/20 bg-[rgba(12,15,22,0.58)] px-4 py-2 text-[1.1rem] font-semibold uppercase tracking-[0.16rem] text-white/95 backdrop-blur-sm transition-colors duration-300 group-hover:border-white/35 group-hover:bg-[rgba(12,15,22,0.72)] group-hover:text-white">
