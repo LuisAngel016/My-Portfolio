@@ -227,6 +227,15 @@ const translations: Record<Language, TranslationSchema> = {
                     category: 'SaaS',
                     stack: ['React', 'TypeScript', 'NestJS'],
                     description: 'SaaS para gestión de citas con landing pública y panel administrativo en una misma presentación.'
+                },
+                {
+                    id: 5,
+                    images: ['/images/maisonblanche.png'],
+                    title: 'Maison Blanche',
+                    url: 'https://maison-blanche-stays.vercel.app/es',
+                    category: 'Hotel boutique',
+                    stack: ['Landing Page', 'Responsive UI', 'Brand Experience'],
+                    description: 'Landing premium para hotel boutique con una propuesta visual elegante, foco en reservas y secciones de suites, spa, restaurante y galería.'
                 }
             ]
         },
@@ -378,6 +387,15 @@ const translations: Record<Language, TranslationSchema> = {
                     category: 'SaaS',
                     stack: ['React', 'TypeScript', 'NestJS'],
                     description: 'Appointment management SaaS with a public landing page and admin dashboard showcased in a single card.'
+                },
+                {
+                    id: 5,
+                    images: ['/images/maisonblanche.png'],
+                    title: 'Maison Blanche',
+                    url: 'https://maison-blanche-stays.vercel.app/es',
+                    category: 'Boutique hotel',
+                    stack: ['Landing Page', 'Responsive UI', 'Brand Experience'],
+                    description: 'Premium landing page for a boutique hotel with an elegant visual system, booking-focused flows, and sections for suites, spa, restaurant, and gallery.'
                 }
             ]
         },
