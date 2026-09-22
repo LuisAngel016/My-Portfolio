@@ -14,11 +14,13 @@ type Project = {
 
 const PortfolioCard = ({ project }: { project: Project }) => {
     const [imageIndex, setImageIndex] = useState(0);
+    const [previousImages, setPreviousImages] = useState(project.images);
     const hasMultipleImages = project.images.length > 1;
 
-    useEffect(() => {
+    if (previousImages !== project.images) {
+        setPreviousImages(project.images);
         setImageIndex(0);
-    }, [project.images]);
+    }
 
     useEffect(() => {
         if (!hasMultipleImages) return;
