@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useState, type ReactNode } from 'react';
+import { createContext, useContext } from 'react';
 
 export type Language = 'es' | 'en';
 
@@ -92,7 +92,7 @@ type TranslationSchema = {
     };
 };
 
-const translations: Record<Language, TranslationSchema> = {
+export const translations: Record<Language, TranslationSchema> = {
     es: {
         nav: {
             home: 'Inicio',
@@ -111,7 +111,7 @@ const translations: Record<Language, TranslationSchema> = {
             greeting: 'Hola, soy',
             rolePrefix: 'Soy',
             roles: ['Desarrollador Full Stack'],
-            description: 'Desarrollador de software con más de 3 años de experiencia diseñando y construyendo aplicaciones web, móviles y de escritorio.',
+            description: 'Desarrollador de software con más de 5 años de experiencia diseñando y construyendo aplicaciones web, móviles y de escritorio.',
             cvButton: 'Descargar CV'
         },
         about: {
@@ -128,7 +128,7 @@ const translations: Record<Language, TranslationSchema> = {
                 'Enfoque en rendimiento, calidad de código y experiencia de usuario.'
             ],
             stats: [
-                { value: '+3', label: 'años de experiencia' },
+                { value: '+5', label: 'años de experiencia' },
                 { value: 'Full Stack', label: 'desarrollo end to end' },
                 { value: 'Impacto real', label: 'productos y procesos' },
                 { value: 'Mejora continua', label: 'optimización y aprendizaje' }
@@ -160,29 +160,29 @@ const translations: Record<Language, TranslationSchema> = {
             intro: 'He trabajado en productos donde el software no era solo una interfaz, sino una herramienta para mejorar operaciones, automatizar procesos y dar soporte real a decisiones de negocio.',
             items: [
                 {
-                    period: '2022 - Actualidad',
-                    badge: 'Impacto',
+                    period: 'Abril 2026 – Actualidad',
+                    badge: 'Actual',
                     role: 'Desarrollador Full Stack',
-                    company: 'Productos internos, dashboards y herramientas operativas',
-                    summary: 'He desarrollado soluciones enfocadas en operación, control y visibilidad del negocio, combinando frontend, backend y diseño de flujos útiles para usuarios reales.',
-                    stack: ['React', 'TypeScript', 'NestJS', 'PostgreSQL'],
+                    company: 'Flowy · SaaS de inventario (producto propio)',
+                    summary: 'Diseñé y desarrollo una plataforma SaaS multi-tenant de inventario y ventas para PYMEs, con POS, kardex, lotes, compras, flujo de caja y reportes PDF.',
+                    stack: ['React', 'TypeScript', 'NestJS', 'PostgreSQL', 'TanStack Query'],
                     achievements: [
-                        'Implementación de flujos de inventario y facturación para operaciones internas.',
-                        'Construcción de dashboards comparativos y reportes PDF para apoyar la toma de decisiones.',
-                        'Desarrollo de interfaces web y móviles con foco en escalabilidad, claridad y mantenibilidad.'
+                        'Arquitectura multi-tenant con aislamiento por schema en PostgreSQL y más de 30 módulos de negocio.',
+                        'POS completo con arqueos de caja, código de barras, devoluciones y facturación en PDF.',
+                        'CI/CD con GitHub Actions, pruebas E2E (Jest y Playwright) e integraciones con Wompi, Cloudflare R2 y Resend.'
                     ]
                 },
                 {
-                    period: 'Stack principal',
-                    badge: 'Stack principal',
-                    role: 'React, TypeScript, NestJS, Flutter',
-                    company: 'Frontend, backend y móvil',
-                    summary: 'Me desenvuelvo en productos end-to-end, conectando la capa visual con lógica de negocio, APIs y persistencia de datos.',
-                    stack: ['React', 'TanStack Query', 'NestJS', 'Flutter'],
+                    period: 'Marzo 2024 – Marzo 2026',
+                    badge: 'Tiempo completo',
+                    role: 'Desarrollador Full Stack',
+                    company: 'KPISOFT · Sincelejo, Colombia',
+                    summary: 'Modernicé una plataforma empresarial migrando de PHP a React + NestJS y desarrollé una app de escritorio en Flutter con operación offline y sincronización en tiempo real para el área de almacén.',
+                    stack: ['React', 'TypeScript', 'NestJS', 'Flutter', 'PostgreSQL'],
                     achievements: [
-                        'Interfaces modernas y responsivas orientadas a conversión y productividad.',
-                        'Integración de APIs, formularios, paneles de administración y módulos de negocio.',
-                        'Optimización de experiencia de usuario, estructura de código y tiempos de entrega.'
+                        'Flujo de almacén (RQ, inventario y entregas) con dashboard comparativo de despachos para la toma de decisiones.',
+                        'Migración de plataforma PHP a React + NestJS, mejorando escalabilidad, rendimiento y experiencia de usuario.',
+                        'App de escritorio en Flutter con modo offline y sincronización en tiempo real mediante WebSockets.'
                     ]
                 }
             ]
@@ -191,6 +191,15 @@ const translations: Record<Language, TranslationSchema> = {
             title: 'Proyectos',
             titleHighlight: 'destacados',
             projects: [
+                {
+                    id: 6,
+                    images: ['/images/flowy-dashboard.png', '/images/flowy-pos.png', '/images/flowy-ventas.png'],
+                    title: 'Flowy',
+                    url: 'https://app.flowystock.com',
+                    category: 'SaaS · Inventario',
+                    stack: ['React', 'NestJS', 'PostgreSQL', 'TypeScript'],
+                    description: 'Plataforma SaaS multi-tenant de inventario y ventas para PYMEs: POS con caja registradora, kardex, lotes, compras, flujo de caja y reportes PDF.'
+                },
                 {
                     id: 1,
                     images: ['/images/teslo-shop.png'],
@@ -236,6 +245,15 @@ const translations: Record<Language, TranslationSchema> = {
                     category: 'Hotel boutique',
                     stack: ['Astro', 'Tailwind', 'TypeScript'],
                     description: 'Landing premium para hotel boutique con una propuesta visual elegante, foco en reservas y secciones de suites, spa, restaurante y galería.'
+                },
+                {
+                    id: 7,
+                    images: ['/images/cinemapedia-cover.svg'],
+                    title: 'Cinemapedia',
+                    url: 'https://github.com/LuisAngel016/flutter-cinemapedia',
+                    category: 'App de películas',
+                    stack: ['Flutter', 'Riverpod', 'Clean Architecture'],
+                    description: 'App de películas desarrollada en Flutter durante el curso de DevTalles: arquitectura limpia por capas, estado con Riverpod, go_router y consumo de The MovieDB API.'
                 }
             ]
         },
@@ -250,7 +268,7 @@ const translations: Record<Language, TranslationSchema> = {
             submit: 'Enviar mensaje'
         },
         footer: {
-            copyright: 'Copyright © 2025 Luis Angel. Todos los derechos reservados.'
+            copyright: 'Copyright © 2026 Luis Angel. Todos los derechos reservados.'
         }
     },
     en: {
@@ -271,7 +289,7 @@ const translations: Record<Language, TranslationSchema> = {
             greeting: 'Hi, I am',
             rolePrefix: 'I am a',
             roles: ['Full Stack Developer'],
-            description: 'Software developer with 3+ years of experience designing and building web, mobile, and desktop applications.',
+            description: 'Software developer with 5+ years of experience designing and building web, mobile, and desktop applications.',
             cvButton: 'Download CV'
         },
         about: {
@@ -288,7 +306,7 @@ const translations: Record<Language, TranslationSchema> = {
                 'Strong focus on performance, code quality, and user experience.'
             ],
             stats: [
-                { value: '3+', label: 'years of experience' },
+                { value: '5+', label: 'years of experience' },
                 { value: 'Full Stack', label: 'end-to-end delivery' },
                 { value: 'Real impact', label: 'products and processes' },
                 { value: 'Continuous growth', label: 'optimization and learning' }
@@ -320,29 +338,29 @@ const translations: Record<Language, TranslationSchema> = {
             intro: 'I have contributed to projects where software is not just an interface, but a tool to improve operations, automate workflows, and generate measurable business outcomes.',
             items: [
                 {
-                    period: '2022 - Present',
-                    badge: 'Impact',
+                    period: 'April 2026 – Present',
+                    badge: 'Current',
                     role: 'Full Stack Developer',
-                    company: 'Product and digital solution projects',
-                    summary: 'I work on business-oriented applications with strong attention to architecture, user experience, and performance.',
-                    stack: ['React', 'TypeScript', 'NestJS', 'PostgreSQL'],
+                    company: 'Flowy · Inventory SaaS (own product)',
+                    summary: 'I designed and built a multi-tenant inventory and sales SaaS platform for SMBs, with POS, stock ledger, batches, purchases, cash flow, and PDF reports.',
+                    stack: ['React', 'TypeScript', 'NestJS', 'PostgreSQL', 'TanStack Query'],
                     achievements: [
-                        'Implemented inventory and billing workflows for internal operations.',
-                        'Built comparative dashboards and PDF reports to support decision-making.',
-                        'Delivered web and mobile interfaces with scalability and maintainability in mind.'
+                        'Multi-tenant architecture with schema isolation in PostgreSQL and 30+ business modules.',
+                        'Full POS: cash register sessions, barcode scanning, returns, and PDF invoicing.',
+                        'CI/CD with GitHub Actions, E2E tests (Jest and Playwright), and Wompi, Cloudflare R2, and Resend integrations.'
                     ]
                 },
                 {
-                    period: 'Core stack',
-                    badge: 'Core stack',
-                    role: 'React, TypeScript, NestJS, Flutter',
-                    company: 'Frontend, backend, and mobile',
-                    summary: 'I am comfortable building end-to-end products, connecting the visual layer with business logic and data.',
-                    stack: ['React', 'TanStack Query', 'NestJS', 'Flutter'],
+                    period: 'March 2024 – March 2026',
+                    badge: 'Full-time',
+                    role: 'Full Stack Developer',
+                    company: 'KPISOFT · Sincelejo, Colombia',
+                    summary: 'I modernized an enterprise platform migrating from PHP to React + NestJS, and built a Flutter desktop app with offline operation and real-time sync for the warehouse area.',
+                    stack: ['React', 'TypeScript', 'NestJS', 'Flutter', 'PostgreSQL'],
                     achievements: [
-                        'Modern responsive interfaces focused on conversion and productivity.',
-                        'API integrations, forms, admin panels, and business modules.',
-                        'Continuous optimization of user experience, code structure, and delivery speed.'
+                        'Warehouse flow (requests, inventory, deliveries) with a comparative dispatch dashboard for decision-making.',
+                        'Platform migration from PHP to React + NestJS, improving scalability, performance, and user experience.',
+                        'Flutter desktop app with offline mode and real-time synchronization over WebSockets.'
                     ]
                 }
             ]
@@ -351,6 +369,15 @@ const translations: Record<Language, TranslationSchema> = {
             title: 'Featured',
             titleHighlight: 'projects',
             projects: [
+                {
+                    id: 6,
+                    images: ['/images/flowy-dashboard.png', '/images/flowy-pos.png', '/images/flowy-ventas.png'],
+                    title: 'Flowy',
+                    url: 'https://app.flowystock.com',
+                    category: 'SaaS · Inventory',
+                    stack: ['React', 'NestJS', 'PostgreSQL', 'TypeScript'],
+                    description: 'Multi-tenant inventory and sales SaaS platform for SMBs: POS with cash register, stock ledger, batches, purchases, cash flow, and PDF reports.'
+                },
                 {
                     id: 1,
                     images: ['/images/teslo-shop.png'],
@@ -396,6 +423,15 @@ const translations: Record<Language, TranslationSchema> = {
                     category: 'Boutique hotel',
                     stack: ['Astro', 'Tailwind', 'TypeScript'],
                     description: 'Premium landing page for a boutique hotel with an elegant visual system, booking-focused flows, and sections for suites, spa, restaurant, and gallery.'
+                },
+                {
+                    id: 7,
+                    images: ['/images/cinemapedia-cover.svg'],
+                    title: 'Cinemapedia',
+                    url: 'https://github.com/LuisAngel016/flutter-cinemapedia',
+                    category: 'Movie app',
+                    stack: ['Flutter', 'Riverpod', 'Clean Architecture'],
+                    description: 'Movie app built with Flutter during the DevTalles course: layered clean architecture, Riverpod state management, go_router, and The MovieDB API.'
                 }
             ]
         },
@@ -410,43 +446,18 @@ const translations: Record<Language, TranslationSchema> = {
             submit: 'Send message'
         },
         footer: {
-            copyright: 'Copyright © 2025 Luis Angel. All rights reserved.'
+            copyright: 'Copyright © 2026 Luis Angel. All rights reserved.'
         }
     }
 };
 
-type LanguageContextValue = {
+export type LanguageContextValue = {
     language: Language;
     setLanguage: (language: Language) => void;
     t: TranslationSchema;
 };
 
-const LanguageContext = createContext<LanguageContextValue | null>(null);
-
-export const LanguageProvider = ({ children }: { children: ReactNode }) => {
-    const [language, setLanguage] = useState<Language>(() => {
-        if (typeof window === 'undefined') {
-            return 'es';
-        }
-
-        const savedLanguage = window.localStorage.getItem('portfolio-language');
-        return savedLanguage === 'en' ? 'en' : 'es';
-    });
-
-    useEffect(() => {
-        window.localStorage.setItem('portfolio-language', language);
-        document.documentElement.lang = language;
-        document.title = language === 'es'
-            ? 'Luis Bustamante | Portfolio Full Stack'
-            : 'Luis Bustamante | Full Stack Portfolio';
-    }, [language]);
-
-    return (
-        <LanguageContext.Provider value={{ language, setLanguage, t: translations[language] }}>
-            {children}
-        </LanguageContext.Provider>
-    );
-};
+export const LanguageContext = createContext<LanguageContextValue | null>(null);
 
 export const useLanguage = () => {
     const context = useContext(LanguageContext);
